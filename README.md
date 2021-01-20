@@ -18,5 +18,5 @@ deploy:
       env:
         KUBE_CONFIG: ${{ secrets.*** }}
       with:
-        target: scanr
+        restart: scanr
 ```
