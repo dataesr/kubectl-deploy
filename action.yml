@@ -1,24 +1,14 @@
-name: kubectl-deploy
-author: folland87
-description: deploy to k8s with GitHub Action
+name: 'kubectl-deploy'
+description: 'Deploy to k8s with GitHub Action'
 inputs:
-  target:
+  target:  # id of input
     description: 'The deployment target to replace the image'
     required: true
-    default: ''
-  # container:
-  #   description: 'The container name to replace the image'
-  #   required: true
-  #   default: ''
-  # image:
-  #   description: 'The image to set in the deployment'
-  #   required: true
-  #   default: ''
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.target }}
-branding:
-  icon: terminal
-  color: blue
