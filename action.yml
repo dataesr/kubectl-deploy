@@ -2,7 +2,7 @@ name: 'kubectl-deploy'
 description: 'Deploy to k8s with GitHub Action'
 inputs:
   restart:
-    description: 'The deployment name to replace the image'
+    description: 'The deployment to restart'
     required: true
 runs:
   using: 'docker'
