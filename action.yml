@@ -1,11 +1,11 @@
 name: 'kubectl-deploy'
 description: 'Deploy to k8s with GitHub Action'
 inputs:
-  target:
-    description: 'The deployment target to replace the image'
+  deployment:
+    description: 'The deployment name to replace the image'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.target }}
+    - ${{ inputs.deployment }}
