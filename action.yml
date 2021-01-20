@@ -1,12 +1,9 @@
 name: 'kubectl-deploy'
 description: 'Deploy to k8s with GitHub Action'
 inputs:
-  target:  # id of input
+  target:
     description: 'The deployment target to replace the image'
     required: true
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
