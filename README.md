@@ -14,9 +14,9 @@ deploy:
     - name: Check Out Repo
       uses: actions/checkout@v2
     - name: Deploy to Cluster
-      uses: ./actions
+      uses: dataesr/kubectl-deploy@v1
       env:
-        KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
+        KUBE_CONFIG: ${{ secrets.*** }}
       with:
         target: scanr
 ```
