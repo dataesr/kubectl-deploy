@@ -17,6 +17,8 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - ${{ inputs.target }}
 branding:
   icon: terminal
   color: blue
