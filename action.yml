@@ -4,8 +4,13 @@ inputs:
   restart:
     description: 'The deployment to restart'
     required: true
+  namespace:
+    description: 'The namespace containing the deployment'
+    required: false
+    default: 'default'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.restart }}
+    - ${{ inputs.namespace }}
